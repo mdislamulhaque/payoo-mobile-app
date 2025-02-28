@@ -18,7 +18,7 @@
       >
         <div class="flex items-center">
           <img src="./assets/Group.png" alt="" />
-          <div>
+          <div class="overflow-hidden break-words">
             <p id="total-Balance" class="text-2xl font-bold">$4500</p>
             <p>Available Balance</p>
           </div>
@@ -83,6 +83,7 @@
           <!-- transection card  -->
           <div
             class="px-3 py-4 shadow-lg rounded-lg hover:bg-blue-300 text-center cursor-pointer"
+            id="history-card"
           >
             <img class="mx-auto" src="./assets/transaction 1.png" alt="" />
             <span>Transection History</span>
@@ -100,6 +101,7 @@
               placeholder="Mobile Number"
               type="text"
               id="add-money-mobile-number"
+              maxlength="11"
             />
             <label for="">Amount</label>
             <input
@@ -114,6 +116,7 @@
               placeholder="Your Pin"
               type="text"
               id="add-money-pin"
+              maxlength="4"
             />
             <button
               class="bg-blue-600 py-2 text-white rounded-lg hover:bg-blue-700"
@@ -138,6 +141,8 @@
           </div>
         </div>
       </section>
+      <!-- history section  -->
+      <section class="hidden" id="transaction-history"></section>
     </section>
     <script type="module" src="./js/login.js"></script>
     <script type="module" src="./js/addMoney.js"></script>
